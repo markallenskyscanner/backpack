@@ -32,7 +32,7 @@ describe('BpkCalendarGrid', () => {
     const tree = renderer
       .create(
         <BpkCalendarGrid
-          month={new Date('2016-10')}
+          month={new Date(Date.UTC(2016, 9, 30, 3, 0, 0))}
           formatMonth={formatMonth}
           formatDateFull={formatDateFull}
           DateComponent={BpkCalendarDate}
@@ -49,7 +49,7 @@ describe('BpkCalendarGrid', () => {
     const tree = renderer
       .create(
         <BpkCalendarGrid
-          month={new Date('2016-10')}
+          month={new Date(Date.UTC(2016, 9, 30, 3, 0, 0))}
           formatMonth={formatMonth}
           formatDateFull={formatDateFull}
           DateComponent={BpkCalendarDate}
@@ -69,7 +69,7 @@ describe('BpkCalendarGrid', () => {
     const tree = renderer
       .create(
         <BpkCalendarGrid
-          month={new Date('2016-10')}
+          month={new Date(Date.UTC(2016, 9, 30, 3, 0, 0))}
           formatMonth={formatMonth}
           formatDateFull={formatDateFull}
           DateComponent={BpkCalendarDate}
@@ -103,7 +103,7 @@ describe('BpkCalendarGrid', () => {
     const tree = renderer
       .create(
         <BpkCalendarGrid
-          month={new Date('2016-10')}
+          month={new Date(Date.UTC(2016, 9, 30, 3, 0, 0))}
           formatMonth={formatMonth}
           formatDateFull={formatDateFull}
           DateComponent={MyCustomDate}
@@ -121,7 +121,7 @@ describe('BpkCalendarGrid', () => {
 
     const grid = mount(
       <BpkCalendarGrid
-        month={new Date('2016-10')}
+        month={new Date(Date.UTC(2016, 9, 30, 3, 0, 0))}
         formatMonth={formatMonth}
         formatDateFull={formatDateFull}
         DateComponent={BpkCalendarDate}
