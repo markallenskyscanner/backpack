@@ -141,8 +141,6 @@ const orderDaysOfWeek = (daysOfWeek, weekStartsOn) => {
 /* Takes arbitrary dates and returns the beginning of the first and enf of the last month containing these dates  */
 function getMonthRange(from, to) {
   return {
-    // TODO SHOULD THIS RETURN START OF DAY?
-    // TODO Could be el problemo
     min: startOfMonth(from),
     max: endOfMonth(to),
   };

@@ -23,13 +23,6 @@ import BpkCalendarContainer from './BpkCalendarContainer';
 import { weekDays, formatDateFull, formatMonth } from '../test-utils';
 import { addDays } from './date-utils';
 
-const testMinDate = new Date(Date.UTC(2010, 1, 15));
-testMinDate.setHours(0, 0, 0, 0);
-const testMaxDate = new Date(Date.UTC(2010, 2, 15));
-testMaxDate.setHours(0, 0, 0, 0);
-const testSelectedDate = new Date(Date.UTC(2010, 1, 15));
-testSelectedDate.setHours(0, 0, 0, 0);
-
 const createNodeMock = () => ({
   focus: () => null,
 });
@@ -44,9 +37,9 @@ describe('BpkCalendarContainer', () => {
           daysOfWeek={weekDays}
           changeMonthLabel="Change month"
           id="myCalendar"
-          minDate={testMinDate}
-          maxDate={testMaxDate}
-          selectedDate={testSelectedDate}
+          minDate={new Date(2010, 1, 15)}
+          maxDate={new Date(2010, 2, 15)}
+          selectedDate={new Date(2010, 1, 15)}
         />,
         { createNodeMock },
       )
@@ -63,8 +56,8 @@ describe('BpkCalendarContainer', () => {
           daysOfWeek={weekDays}
           changeMonthLabel="Change month"
           id="myCalendar"
-          minDate={testMinDate}
-          maxDate={testMaxDate}
+          minDate={new Date(2010, 1, 15)}
+          maxDate={new Date(2010, 2, 15)}
           initiallyFocusedDate={new Date(2010, 1, 28)}
         />,
         { createNodeMock },
@@ -81,9 +74,9 @@ describe('BpkCalendarContainer', () => {
         daysOfWeek={weekDays}
         changeMonthLabel="Change month"
         id="myCalendar"
-        minDate={testMinDate}
-        maxDate={testMaxDate}
-        selectedDate={testSelectedDate}
+        minDate={new Date(2010, 1, 15)}
+        maxDate={new Date(2010, 2, 15)}
+        selectedDate={new Date(2010, 1, 15)}
       />,
     );
 
@@ -109,9 +102,9 @@ describe('BpkCalendarContainer', () => {
         daysOfWeek={weekDays}
         changeMonthLabel="Change month"
         id="myCalendar"
-        minDate={testMinDate}
-        maxDate={testMaxDate}
-        selectedDate={testSelectedDate}
+        minDate={new Date(2010, 1, 15)}
+        maxDate={new Date(2010, 2, 15)}
+        selectedDate={new Date(2010, 1, 15)}
         onDateSelect={onDateSelect}
       />,
     );
@@ -138,9 +131,9 @@ describe('BpkCalendarContainer', () => {
         daysOfWeek={weekDays}
         changeMonthLabel="Change month"
         id="myCalendar"
-        minDate={testMinDate}
-        maxDate={testMaxDate}
-        selectedDate={testSelectedDate}
+        minDate={new Date(2010, 1, 15)}
+        maxDate={new Date(2010, 2, 15)}
+        selectedDate={new Date(2010, 1, 15)}
         onDateSelect={null}
       />,
     );
@@ -167,8 +160,8 @@ describe('BpkCalendarContainer', () => {
         daysOfWeek={weekDays}
         changeMonthLabel="Change month"
         id="myCalendar"
-        minDate={testMinDate}
-        maxDate={testMaxDate}
+        minDate={new Date(2010, 1, 15)}
+        maxDate={new Date(2010, 2, 15)}
         selectedDate={origin}
       />,
     );
