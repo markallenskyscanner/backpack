@@ -27,8 +27,9 @@ import { weekDays, formatDateFull, formatMonth } from '../test-utils';
 import BpkCalendarGrid from './BpkCalendarGrid';
 import BpkCalendarDate from './BpkCalendarDate';
 
-const testDate = new Date(Date.UTC(2016, 1, 15));
-testDate.setHours(0, 0, 0, 0);
+const testDate = new Date(2016, 9, 30);
+// const testDate = new Date(Date.UTC(2016, 9, 30, 3));
+// testDate.setHours(0);
 
 describe('BpkCalendarGrid', () => {
   it('should render correctly with "showWeekendSeparator" attribute set to false', () => {

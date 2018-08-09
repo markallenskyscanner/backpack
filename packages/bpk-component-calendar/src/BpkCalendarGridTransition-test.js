@@ -26,15 +26,31 @@ import BpkCalendarGridTransition, {
 const MyComponent = props => <div>{JSON.stringify(props)}</div>;
 const TransitioningMyComponent = addCalendarGridTransition(MyComponent);
 
+const MyDate = Date;
+MyDate.prototype.toLocaleString = () => {
+  return 'lol';
+};
+
+const testDate2009 = new Date(Date.UTC(2009, 1, 1, 5));
+//testdate2009.sethours(15);
+const testDate2010 = new Date(Date.UTC(2010, 1, 1, 5));
+//testdate2010.sethours(15);
+const testDate2010Next = new Date(Date.UTC(2010, 2, 1, 5));
+//testdate2010next.sethours(15);
+const testDate2010Previous = new Date(Date.UTC(2010, 0, 1, 5));
+//testdate2010previous.sethours(15);
+const testDate2011 = new Date(Date.UTC(2011, 1, 1, 5));
+//testdate2011.sethours(15);
+
 describe('BpkCalendar', () => {
   it('should render correctly', () => {
     const tree = renderer
       .create(
         <TransitioningMyComponent
           TransitionComponent={MyComponent}
-          minDate={new Date(Date.UTC(2009, 1))}
-          maxDate={new Date(Date.UTC(2011, 1))}
-          month={new Date(Date.UTC(2010, 1))}
+          minDate={testDate2009}
+          maxDate={testDate2011}
+          month={testDate2010}
         />,
       )
       .toJSON();

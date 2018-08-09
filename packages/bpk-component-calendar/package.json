@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "bpk-component-button": "^2.1.11",
-    "bpk-component-text": "^1.0.71"
+    "bpk-component-text": "^1.0.71",
+    "moment-timezone": "^0.5.21"
   }
 }
