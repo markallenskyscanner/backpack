@@ -19,7 +19,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { browserHistory } from 'react-router';
+import { browserHistory } from 'react-router-dom';
 
 import BpkText from 'bpk-component-text';
 

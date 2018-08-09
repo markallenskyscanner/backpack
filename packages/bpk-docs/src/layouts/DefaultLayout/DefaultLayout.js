@@ -22,7 +22,7 @@ import React from 'react';
 import { updateOnThemeChange } from 'bpk-component-theme-toggle';
 import BpkThemeProvider from 'bpk-theming';
 
-import { PropTypes as RouterPropTypes } from 'react-router';
+import { PropTypes as RouterPropTypes } from 'react-router-dom';
 import { cssModules } from 'bpk-react-utils';
 
 import themeAttributes from '../../themeableAttributes';

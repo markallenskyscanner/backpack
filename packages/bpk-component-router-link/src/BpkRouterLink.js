@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { cssModules } from 'bpk-react-utils';
-import { Link, PropTypes as RouterPropTypes } from 'react-router';
 
 import STYLES from './bpk-router-link.scss';
 
@@ -47,10 +47,7 @@ const BpkRouterLink = props => {
 
 BpkRouterLink.propTypes = {
   children: PropTypes.node.isRequired,
-  to: PropTypes.oneOfType([
-    PropTypes.shape(RouterPropTypes.locationShape),
-    PropTypes.string,
-  ]).isRequired,
+  to: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   className: PropTypes.string,
 };
 

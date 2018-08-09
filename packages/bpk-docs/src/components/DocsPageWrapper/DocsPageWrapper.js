@@ -18,7 +18,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import { find } from 'lodash';
 import BpkContentContainer from 'bpk-component-content-container';
 import BpkHorizontalNav, {

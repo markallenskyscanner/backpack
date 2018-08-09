@@ -18,7 +18,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IndexLink, withRouter } from 'react-router';
+import { IndexLink, withRouter } from 'react-router-dom';
 
 import AnimateHeight from 'bpk-animate-height';
 import BpkHorizontalNav, {

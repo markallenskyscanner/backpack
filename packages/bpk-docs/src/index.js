@@ -26,7 +26,7 @@ import {
   match,
   browserHistory,
   createMemoryHistory,
-} from 'react-router';
+} from 'react-router-dom';
 import 'es6-promise/auto';
 
 import routes from './routes';

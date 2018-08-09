@@ -23,7 +23,7 @@ import BpkLink from 'bpk-component-link';
 import BpkTile from 'bpk-component-tile';
 import { cssModules } from 'bpk-react-utils';
 import { colors } from 'bpk-tokens/tokens/base.es6';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import BpkContentContainer from 'bpk-component-content-container';
 import {
   BpkGridContainer,

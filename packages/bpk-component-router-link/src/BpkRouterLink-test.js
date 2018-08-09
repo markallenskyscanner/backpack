@@ -18,12 +18,20 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import BpkRouterLink from './BpkRouterLink';
 
 describe('BpkRouterLink', () => {
   it('should render correctly with a "to" attribute', () => {
     const tree = renderer
-      .create(<BpkRouterLink to="#">Link</BpkRouterLink>)
+      .create(
+        <Router>
+          <div>
+            <BpkRouterLink to="#">Link</BpkRouterLink>
+          </div>
+        </Router>,
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -31,9 +39,16 @@ describe('BpkRouterLink', () => {
   it('should render correctly with a "className" attribute', () => {
     const tree = renderer
       .create(
-        <BpkRouterLink to="#" className="my-custom-class-1 my-custom-class-2">
-          Link
-        </BpkRouterLink>,
+        <Router>
+          <div>
+            <BpkRouterLink
+              to="#"
+              className="my-custom-class-1 my-custom-class-2"
+            >
+              Link
+            </BpkRouterLink>,
+          </div>
+        </Router>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -42,9 +57,13 @@ describe('BpkRouterLink', () => {
   it('should render correctly with arbitrary attributes', () => {
     const tree = renderer
       .create(
-        <BpkRouterLink to="#" target="_blank">
-          Link
-        </BpkRouterLink>,
+        <Router>
+          <div>
+            <BpkRouterLink to="#" target="_blank">
+              Link
+            </BpkRouterLink>,
+          </div>
+        </Router>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

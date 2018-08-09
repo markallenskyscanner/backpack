@@ -23,7 +23,7 @@ import {
   IndexRedirect,
   Redirect,
   withRouter,
-} from 'react-router';
+} from 'react-router-dom';
 
 import * as ROUTES from '../constants/routes';
 import redirects from '../constants/redirect-routes';

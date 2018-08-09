@@ -18,7 +18,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { cssModules } from 'bpk-react-utils';
 import ArrowIcon from 'bpk-component-icon/sm/arrow-right';
 import { withRtlSupport } from 'bpk-component-icon';
