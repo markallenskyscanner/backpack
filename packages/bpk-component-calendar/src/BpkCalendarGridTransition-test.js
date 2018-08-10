@@ -19,6 +19,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
+import moment from 'moment-timezone';
 import BpkCalendarGridTransition, {
   addCalendarGridTransition,
 } from './BpkCalendarGridTransition';
@@ -26,12 +27,14 @@ import BpkCalendarGridTransition, {
 const MyComponent = props => <div>{JSON.stringify(props)}</div>;
 const TransitioningMyComponent = addCalendarGridTransition(MyComponent);
 
-const MyDate = Date;
-MyDate.prototype.toLocaleString = () => {
-  return 'lol';
+// Date.prototype.getISOString = function() {
+//   return 'lol';
+// };
+Date.prototype.getTimezoneOffset = function() {
+  return 0;
 };
 
-const testDate2009 = new Date(Date.UTC(2009, 1, 1, 5));
+const testDate2009 = new Date(new Date(2009, 1, 1, 5).getTime() - 60 * 60000);
 //testdate2009.sethours(15);
 const testDate2010 = new Date(Date.UTC(2010, 1, 1, 5));
 //testdate2010.sethours(15);
@@ -42,13 +45,17 @@ const testDate2010Previous = new Date(Date.UTC(2010, 0, 1, 5));
 const testDate2011 = new Date(Date.UTC(2011, 1, 1, 5));
 //testdate2011.sethours(15);
 
+// var td2009 = moment("2009-01-01T15:00:00Z").tz('America/Los_Angeles');
+// var td2010 = moment("2010-01-01T15:00:00Z").tz('America/Los_Angeles');
+// var td2011 = moment("2011-01-01T15:00:00Z").tz('America/Los_Angeles');
+
 describe('BpkCalendar', () => {
   it('should render correctly', () => {
     const tree = renderer
       .create(
         <TransitioningMyComponent
           TransitionComponent={MyComponent}
-          minDate={testDate2009}
+          minDate={testDate2011}
           maxDate={testDate2011}
           month={testDate2010}
         />,
